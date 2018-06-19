@@ -35,7 +35,7 @@ while resultado != True:
     os.system('clear')
 
     # Verifica se tem empate
-    if funcoesJDV.verificaEmpate(tabuleiro) == True:
+    if funcoesJDV.verificaEmpate(tabuleiro, simboloHumano, simboloIa) == True:
         break
 
     # Exibindo tabuleiro
@@ -59,7 +59,7 @@ while resultado != True:
     # INTELIGÊNCIA ARTIFICIAL
     #################################
     # Verifica Fim de Jogo
-    if funcoesJDV.verificaEmpate(tabuleiro) == True:
+    if funcoesJDV.verificaEmpate(tabuleiro, simboloHumano, simboloIa) == True:
         break
 
     # Jogada da inteligência artificial

@@ -1,3 +1,5 @@
+import os
+
 # Função que verifica todas as possibilidades de vencedor e retorna se venceu ou não
 def verificaCampeao(tabuleiro, simbolo):
     if tabuleiro[0] == simbolo and tabuleiro[1] == simbolo and tabuleiro[2] == simbolo:
@@ -40,9 +42,9 @@ def validaPosicao(tabuleiro):
     return posicao-1
 
 # Função para verificar se ocorreu empate no jogo
-def verificaEmpate(tabuleiro):
+def verificaEmpate(tabuleiro, simboloHumano, simboloIa):
     if not "." in tabuleiro:
         os.system('clear')
         print("EMPATE\n\n")
-        funcoesJDV.imprimiTabuleiro(tabuleiro, simboloHumano, simboloIa)
+        imprimiTabuleiro(tabuleiro, simboloHumano, simboloIa)
         return True
