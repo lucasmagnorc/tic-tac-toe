@@ -11,7 +11,6 @@ simbolo = ""
 simboloHumano = " "
 simboloIa = " "
 tabuleiro = [".",".",".",".",".",".",".",".","."]
-contadorJogadas = 0
 jogaPrimeiro = randint(0,1)
 
 # Limpando o console
@@ -29,24 +28,26 @@ while simbolo != "1" and simbolo != "2":
     os.system('clear')
 
 while resultado != True:
+    ##################################
+    # JOGADOR / HUMANO
+    ##################################
     # Limpando o console
     os.system('clear')
 
-    # Verifica Empate
+    # Verifica se tem empate
     if funcoesJDV.verificaEmpate(tabuleiro) == True:
         break
 
-    # Imprimindo tabuleiro
+    # Exibindo tabuleiro
     funcoesJDV.imprimiTabuleiro(tabuleiro, simboloHumano, simboloIa)
 
-    # Pegando uma posição válida
+    # Pegando uma posição válida escolhida pelo jogador
     posicao = funcoesJDV.validaPosicao(tabuleiro)
 
     # Colocando o símbolo na posição e acrescentando contador
     tabuleiro[posicao] = simboloHumano
-    contadorJogadas += 1
 
-    # Verifica se o Humano é campeao
+    # Verifica se o jogador é vitorioso e exibi na tela 
     campeao = funcoesJDV.verificaCampeao(tabuleiro, simboloHumano)
     if campeao == simboloHumano:
         os.system('clear')
@@ -54,13 +55,17 @@ while resultado != True:
         funcoesJDV.imprimiTabuleiro(tabuleiro, simboloHumano, simboloIa)
         break
 
+    #################################
+    # INTELIGÊNCIA ARTIFICIAL
+    #################################
     # Verifica Fim de Jogo
     if funcoesJDV.verificaEmpate(tabuleiro) == True:
         break
 
+    # Jogada da inteligência artificial
     agenteSimples.jogadaIa(tabuleiro, simboloIa)
 
-    # Verifica campeao
+    # Verifica se a inteligência artificial é vitoriosa e exibe na tela que o humano perdeu
     campeao = funcoesJDV.verificaCampeao(tabuleiro, simboloIa)
     if campeao == simboloIa:
         os.system('clear')
@@ -68,8 +73,5 @@ while resultado != True:
         funcoesJDV.imprimiTabuleiro(tabuleiro, simboloHumano, simboloIa)
         break
 
-    # Verifica Fim de Jogo
-    if funcoesJDV.verificaEmpate(tabuleiro) == True:
-        break
-
+    # Exibindo o tabuleiro
     funcoesJDV.imprimiTabuleiro(tabuleiro, simboloHumano, simboloIa)

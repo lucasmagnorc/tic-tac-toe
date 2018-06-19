@@ -1,5 +1,6 @@
 from random import randint
 
+# Verifica o cenário atual para tomar a decisão da jogada
 def jogadaIa(tabuleiro, simboloIa):
     if not "X" in tabuleiro or not "O" in tabuleiro:
         posicao = randint(0, 8)

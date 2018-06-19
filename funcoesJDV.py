@@ -1,4 +1,4 @@
-
+# Função que verifica todas as possibilidades de vencedor e retorna se venceu ou não
 def verificaCampeao(tabuleiro, simbolo):
     if tabuleiro[0] == simbolo and tabuleiro[1] == simbolo and tabuleiro[2] == simbolo:
         return simbolo
@@ -19,6 +19,7 @@ def verificaCampeao(tabuleiro, simbolo):
     else:
         return None
 
+# Função para exibir o tabuleiro de exemplo e o tabuleiro de jogo
 def imprimiTabuleiro(tabuleiro, simboloHumano, simboloIa):
     print("Humano = " + simboloHumano)
     print("Inteligencia Artificial = " + simboloIa + "\n")
@@ -31,12 +32,14 @@ def imprimiTabuleiro(tabuleiro, simboloHumano, simboloIa):
     print(str(tabuleiro[6])+" | "+str(tabuleiro[7]) +
           " | "+str(tabuleiro[8]) + "\t\t7 | 8 | 9")
 
+# Função para pegar a posição da jogada do humano, e verificar se ela é válida, e retorna a posição se ela for válida
 def validaPosicao(tabuleiro):
     posicao = int(input("\nQual posição deseja jogar ? "))
     while (posicao < 1 or posicao > 9) and tabuleiro != ".":
         posicao = int(input("\nQual posição deseja jogar ? "))
     return posicao-1
 
+# Função para verificar se ocorreu empate no jogo
 def verificaEmpate(tabuleiro):
     if not "." in tabuleiro:
         os.system('clear')
