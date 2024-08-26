@@ -1,13 +1,13 @@
-# jogo_da_velha
+# tic-tac-toe
 
-O jogo da velha é um jogo de passatempo que estimula o pensamento e raciocínio lógico.
+Tac-toe is a pastime game that stimulates thinking and logical reasoning.
 
-## Porque foi desenvolvido?
+## Why was it developed?
 
-Este jogo foi desenvolvido para poder implementar e conhecer como funciona um agente simples de inteligência artificial. A principal dificuldade desse agente simples consiste na quantidade de cenários para o agente.
+This game was developed to be able to implement and learn how a simple artificial intelligence agent works. The main difficulty of this simple agent is the number of scenarios for the agent.
 
-## Como jogar?
+## How to play?
 
-Para jogar basta clonar o repositório, da o comando para iniciar e seguir as orientações do jogo:
+To play, simply clone the repository, give the command to start and follow the game's instructions:
 
-> python3 JogodaVelha.py 
+> python3 JogodaVelha.py
